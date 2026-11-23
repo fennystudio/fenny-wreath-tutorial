@@ -37,7 +37,7 @@ function run(search = '') {
 test('every outbound link has a unique stable ID and a manifest entry', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const anchors = [...html.matchAll(/<a\b[^>]*>/g)].map(x => x[0]);
-  assert.equal(anchors.length, 36);
+  assert.equal(anchors.length, 37);
   assert.equal(manifest.buttons.length, anchors.length);
   assert.equal(new Set(manifest.buttons.map(b => b.id)).size, anchors.length);
   for (const b of manifest.buttons) {
@@ -49,7 +49,7 @@ test('every outbound link has a unique stable ID and a manifest entry', () => {
   assert.match(html, /<script defer src="analytics\.js\?v=20261123"><\/script>/);
 });
 
-test('all 36 real click handlers send distinct events without blocking links', () => {
+test('all 37 real click handlers send distinct events without blocking links', () => {
   const state = run();
   assert.match(state.loaded, /gtag\/js\?id=G-FEYLE5FWZZ$/);
   assert.ok(state.events().includes('wreath_view'));
@@ -58,7 +58,7 @@ test('all 36 real click handlers send distinct events without blocking links', (
       preventDefault: () => assert.fail('navigation blocked') });
     assert.ok(state.events().includes('wreath_click_' + link.dataset.trackId));
   }
-  assert.equal(state.events().filter(n => n.startsWith('wreath_click_')).length, 36);
+  assert.equal(state.events().filter(n => n.startsWith('wreath_click_')).length, 37);
 });
 
 test('QA visits and clicks never enter the production event namespace', () => {

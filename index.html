@@ -188,14 +188,33 @@
 
   /* ========== 準備材料 ========== */
   .step-badge.prep { background: var(--green); font-size: 15px; }
-  .mat-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
-  @media (min-width: 480px) { .mat-list { grid-template-columns: 1fr 1fr; } }
-  .mat-list li {
-    background: var(--cream); border: 1px solid var(--line); border-radius: 12px;
-    padding: 10px 14px; font-size: clamp(14px, 3.8vw, 17px); line-height: 1.5;
+  .prep .step-inner { max-width: 600px; }
+  .prep .step-body { padding: 16px 16px 18px; }
+  @media (min-width: 760px) { .prep .step-inner { display: block; } .prep .step-body { padding: 20px 24px; } }
+  .prep .step-head { margin-bottom: 10px; }
+  .mat-list {
+    list-style: none; display: grid; grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--cream);
   }
-  .mat-list li b { color: var(--red-deep); }
-  .mat-note { margin-top: 12px; color: var(--ink-soft); font-size: clamp(13px,3.4vw,15px); }
+  .mat-list li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+    padding: 7px 12px; font-size: clamp(13px, 3.6vw, 15px); line-height: 1.4;
+    border-bottom: 1px solid var(--line);
+  }
+  .mat-list li:nth-child(odd):not(.wide) { border-right: 1px solid var(--line); }
+  .mat-list li.wide { grid-column: 1 / -1; }
+  .mat-list li:last-child { border-bottom: 0; }
+  .mat-list li b { color: var(--red-deep); white-space: nowrap; }
+  .mat-list li span { color: var(--ink-soft); text-align: right; }
+  .mat-buy {
+    margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: var(--red-soft);
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px;
+    font-size: clamp(13px, 3.5vw, 15px); color: var(--red-deep); font-weight: 600; text-align: center;
+  }
+  .btn-mat {
+    display: inline-block; background: var(--red); color: #fff; text-decoration: none;
+    padding: 6px 14px; border-radius: 20px; font-weight: 800; font-size: clamp(13px, 3.5vw, 15px);
+  }
   .jump { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
   .jump button {
     border: 1px solid var(--line); background: var(--white-warm); color: var(--ink);
@@ -250,23 +269,22 @@
 </section>
 
 <!-- 準備材料 -->
-<section class="step" id="step-prep">
+<section class="step prep" id="step-prep">
   <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step0-materials-poster.jpg"><source src="steps/step0-materials.mp4" type="video/mp4"></video></div>
-    <div class="step-body">
-      <div class="step-head"><div class="step-badge prep">備</div><h3>🧺 準備材料</h3></div>
-      <ul class="mat-list">
-        <li><b>綠色毛根</b>　約半捆</li>
-        <li><b>白色塑膠圈</b>　1 個</li>
-        <li><b>鉛筆</b></li>
-        <li><b>鈴鐺</b>　1 個</li>
-        <li><b>皮革繩</b>　1 條</li>
-        <li><b>緞帶</b>　1 條</li>
-        <li><b>小裝飾</b>　毛球、小蝴蝶結、雪花等</li>
-        <li><b>手工膠或保麗龍膠</b>　貼裝飾用</li>
-      </ul>
-      <div class="mat-note">花環主體全部用扭的、繞的，不用熱熔膠，親子一起做也不怕燙。</div>
-    </div>
+  <div class="step-body">
+    <div class="step-head"><div class="step-badge prep">備</div><h3>🧺 準備材料</h3></div>
+    <ul class="mat-list">
+      <li><b>綠色毛根</b><span>約半捆</span></li>
+      <li><b>白色塑膠圈</b><span>1 個</span></li>
+      <li><b>鉛筆</b><span></span></li>
+      <li><b>鈴鐺</b><span>1 個</span></li>
+      <li><b>皮革繩</b><span>1 條</span></li>
+      <li><b>緞帶</b><span>1 條</span></li>
+      <li class="wide"><b>小裝飾</b><span>毛球、小蝴蝶結、雪花等</span></li>
+      <li class="wide"><b>手工膠或保麗龍膠</b><span>貼裝飾用</span></li>
+    </ul>
+    <div class="mat-buy"><span>懶得買材料？</span><a class="btn-mat" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b17" data-track-position="after_materials" data-track-label="🛒 這裡可以購買材料包">🛒 這裡可以購買材料包</a></div>
+  </div>
   </div>
 </section>
 
@@ -307,7 +325,7 @@
   <div class="midcta-inner">
     <h3>懶得準備材料？🎁</h3>
     <p>毛根、白圈、鈴鐺、皮繩和裝飾都幫你備好了，還附完整教學影片，打開就能做。</p>
-    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b17" data-track-position="after_step_2" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b18" data-track-position="after_step_2" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
   </div>
 </section>
 
@@ -347,7 +365,7 @@
   <div class="midcta-inner">
     <h3>材料不用自己找 🎁</h3>
     <p>一包就有整個花環要用的材料和完整教學影片，打開就能接著做。</p>
-    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b18" data-track-position="after_step_4" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b19" data-track-position="after_step_4" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
   </div>
 </section>
 
@@ -374,22 +392,22 @@
     <h2>🎄 更多芬妮聖誕系列材料包</h2>
     <p>一樣都附完整教學，新手也能輕鬆做。</p>
     <div class="series-grid">
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b19" data-track-position="bottom_series" data-track-label="免膠繽紛聖誕花環"><img src="kits/glue-free-colorful-christmas-wreath-diy-kit.jpg" alt="免膠繽紛聖誕花環材料包" loading="lazy"><span>免膠繽紛聖誕花環</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-snowman-diy-kit/" target="_blank" rel="noopener" data-track-id="b20" data-track-position="bottom_series" data-track-label="迷你聖誕雪人"><img src="kits/mini-christmas-snowman-diy-kit.jpg" alt="迷你聖誕雪人材料包" loading="lazy"><span>迷你聖誕雪人</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-reindeer-diy-kit/" target="_blank" rel="noopener" data-track-id="b21" data-track-position="bottom_series" data-track-label="迷你聖誕小麋鹿"><img src="kits/mini-christmas-reindeer-diy-kit.jpg" alt="迷你聖誕小麋鹿材料包" loading="lazy"><span>迷你聖誕小麋鹿</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-pompom-santa-diy-kit/" target="_blank" rel="noopener" data-track-id="b22" data-track-position="bottom_series" data-track-label="聖誕蓬蓬老公公"><img src="kits/christmas-pompom-santa-diy-kit.jpg" alt="聖誕蓬蓬老公公材料包" loading="lazy"><span>聖誕蓬蓬老公公</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-scarf-bear-diy-kit/" target="_blank" rel="noopener" data-track-id="b23" data-track-position="bottom_series" data-track-label="聖誕圍巾小熊"><img src="kits/christmas-scarf-bear-diy-kit.jpg" alt="聖誕圍巾小熊材料包" loading="lazy"><span>聖誕圍巾小熊</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/bear-guardian-christmas-tree-diy-kit/" target="_blank" rel="noopener" data-track-id="b24" data-track-position="bottom_series" data-track-label="熊熊守護聖誕樹"><img src="kits/bear-guardian-christmas-tree-diy-kit.jpg" alt="熊熊守護聖誕樹材料包" loading="lazy"><span>熊熊守護聖誕樹</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-lucky-bell-diy-kit/" target="_blank" rel="noopener" data-track-id="b25" data-track-position="bottom_series" data-track-label="聖誕好運鈴"><img src="kits/christmas-lucky-bell-diy-kit.jpg" alt="聖誕好運鈴材料包" loading="lazy"><span>聖誕好運鈴</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-tree-diy/" target="_blank" rel="noopener" data-track-id="b26" data-track-position="bottom_series" data-track-label="繽紛聖誕樹"><img src="kits/christmas-tree-diy.jpg" alt="繽紛聖誕樹材料包" loading="lazy"><span>繽紛聖誕樹</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-wreath-diy/" target="_blank" rel="noopener" data-track-id="b27" data-track-position="bottom_series" data-track-label="聖誕花環"><img src="kits/christmas-wreath-diy.jpg" alt="聖誕花環材料包" loading="lazy"><span>聖誕花環</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/q-christmas-wreath/" target="_blank" rel="noopener" data-track-id="b28" data-track-position="bottom_series" data-track-label="Q萌花環"><img src="kits/q-christmas-wreath.jpg" alt="Q萌花環材料包" loading="lazy"><span>Q萌花環</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/snowflake-diy/" target="_blank" rel="noopener" data-track-id="b29" data-track-position="bottom_series" data-track-label="聖誕雪花掛飾"><img src="kits/snowflake-diy.jpg" alt="聖誕雪花掛飾材料包" loading="lazy"><span>聖誕雪花掛飾</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-diy/" target="_blank" rel="noopener" data-track-id="b30" data-track-position="bottom_series" data-track-label="聖誕老公公掛飾"><img src="kits/santa-diy.jpg" alt="聖誕老公公掛飾材料包" loading="lazy"><span>聖誕老公公掛飾</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-claus-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b31" data-track-position="bottom_series" data-track-label="聖誕老公公花環"><img src="kits/santa-claus-christmas-wreath-diy-kit.jpg" alt="聖誕老公公花環材料包" loading="lazy"><span>聖誕老公公花環</span></a>
-      <a class="series-card" href="https://flowers.fenny-studio.com/product/rainbow-dream-65cm-pipe-cleaner-christmas-tree/" target="_blank" rel="noopener" data-track-id="b32" data-track-position="bottom_series" data-track-label="彩虹夢境大型樹"><img src="kits/rainbow-dream-65cm-pipe-cleaner-christmas-tree.jpg" alt="彩虹夢境大型聖誕樹材料包" loading="lazy"><span>彩虹夢境大型樹</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b20" data-track-position="bottom_series" data-track-label="免膠繽紛聖誕花環"><img src="kits/glue-free-colorful-christmas-wreath-diy-kit.jpg" alt="免膠繽紛聖誕花環材料包" loading="lazy"><span>免膠繽紛聖誕花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-snowman-diy-kit/" target="_blank" rel="noopener" data-track-id="b21" data-track-position="bottom_series" data-track-label="迷你聖誕雪人"><img src="kits/mini-christmas-snowman-diy-kit.jpg" alt="迷你聖誕雪人材料包" loading="lazy"><span>迷你聖誕雪人</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-reindeer-diy-kit/" target="_blank" rel="noopener" data-track-id="b22" data-track-position="bottom_series" data-track-label="迷你聖誕小麋鹿"><img src="kits/mini-christmas-reindeer-diy-kit.jpg" alt="迷你聖誕小麋鹿材料包" loading="lazy"><span>迷你聖誕小麋鹿</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-pompom-santa-diy-kit/" target="_blank" rel="noopener" data-track-id="b23" data-track-position="bottom_series" data-track-label="聖誕蓬蓬老公公"><img src="kits/christmas-pompom-santa-diy-kit.jpg" alt="聖誕蓬蓬老公公材料包" loading="lazy"><span>聖誕蓬蓬老公公</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-scarf-bear-diy-kit/" target="_blank" rel="noopener" data-track-id="b24" data-track-position="bottom_series" data-track-label="聖誕圍巾小熊"><img src="kits/christmas-scarf-bear-diy-kit.jpg" alt="聖誕圍巾小熊材料包" loading="lazy"><span>聖誕圍巾小熊</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/bear-guardian-christmas-tree-diy-kit/" target="_blank" rel="noopener" data-track-id="b25" data-track-position="bottom_series" data-track-label="熊熊守護聖誕樹"><img src="kits/bear-guardian-christmas-tree-diy-kit.jpg" alt="熊熊守護聖誕樹材料包" loading="lazy"><span>熊熊守護聖誕樹</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-lucky-bell-diy-kit/" target="_blank" rel="noopener" data-track-id="b26" data-track-position="bottom_series" data-track-label="聖誕好運鈴"><img src="kits/christmas-lucky-bell-diy-kit.jpg" alt="聖誕好運鈴材料包" loading="lazy"><span>聖誕好運鈴</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-tree-diy/" target="_blank" rel="noopener" data-track-id="b27" data-track-position="bottom_series" data-track-label="繽紛聖誕樹"><img src="kits/christmas-tree-diy.jpg" alt="繽紛聖誕樹材料包" loading="lazy"><span>繽紛聖誕樹</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-wreath-diy/" target="_blank" rel="noopener" data-track-id="b28" data-track-position="bottom_series" data-track-label="聖誕花環"><img src="kits/christmas-wreath-diy.jpg" alt="聖誕花環材料包" loading="lazy"><span>聖誕花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/q-christmas-wreath/" target="_blank" rel="noopener" data-track-id="b29" data-track-position="bottom_series" data-track-label="Q萌花環"><img src="kits/q-christmas-wreath.jpg" alt="Q萌花環材料包" loading="lazy"><span>Q萌花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/snowflake-diy/" target="_blank" rel="noopener" data-track-id="b30" data-track-position="bottom_series" data-track-label="聖誕雪花掛飾"><img src="kits/snowflake-diy.jpg" alt="聖誕雪花掛飾材料包" loading="lazy"><span>聖誕雪花掛飾</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-diy/" target="_blank" rel="noopener" data-track-id="b31" data-track-position="bottom_series" data-track-label="聖誕老公公掛飾"><img src="kits/santa-diy.jpg" alt="聖誕老公公掛飾材料包" loading="lazy"><span>聖誕老公公掛飾</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-claus-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b32" data-track-position="bottom_series" data-track-label="聖誕老公公花環"><img src="kits/santa-claus-christmas-wreath-diy-kit.jpg" alt="聖誕老公公花環材料包" loading="lazy"><span>聖誕老公公花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/rainbow-dream-65cm-pipe-cleaner-christmas-tree/" target="_blank" rel="noopener" data-track-id="b33" data-track-position="bottom_series" data-track-label="彩虹夢境大型樹"><img src="kits/rainbow-dream-65cm-pipe-cleaner-christmas-tree.jpg" alt="彩虹夢境大型聖誕樹材料包" loading="lazy"><span>彩虹夢境大型樹</span></a>
     </div>
-    <a class="btn-all" href="https://flowers.fenny-studio.com/product-category/christmas/" target="_blank" rel="noopener" data-track-id="b33" data-track-position="bottom_all" data-track-label="🎄 逛全部聖誕系列材料包 ›">🎄 逛全部聖誕系列材料包 ›</a>
+    <a class="btn-all" href="https://flowers.fenny-studio.com/product-category/christmas/" target="_blank" rel="noopener" data-track-id="b34" data-track-position="bottom_all" data-track-label="🎄 逛全部聖誕系列材料包 ›">🎄 逛全部聖誕系列材料包 ›</a>
   </div>
 </section>
 
@@ -397,9 +415,9 @@
   <div class="msg">每一個都是你親手繞出來的，蓬度都不一樣。<br><strong>聖誕快樂！</strong> 🎁</div>
   <div class="intro">想看更多手作、預約課程或訂製作品，歡迎追蹤・聯絡芬妮手作 🤍</div>
   <div class="contact-row">
-    <a class="contact-card" href="https://www.instagram.com/fenny.studio/" target="_blank" rel="noopener" data-track-id="b34" data-track-position="footer" data-track-label="📷 Instagram @fenny.studio"><span class="ce">📷</span><span class="cn">Instagram</span><span class="cs">@fenny.studio</span></a>
-    <a class="contact-card" href="https://lin.ee/117MDRD" target="_blank" rel="noopener" data-track-id="b35" data-track-position="footer" data-track-label="💬 LINE 加好友"><span class="ce">💬</span><span class="cn">LINE</span><span class="cs">加好友</span></a>
-    <a class="contact-card" href="https://flowers.fenny-studio.com/" target="_blank" rel="noopener" data-track-id="b36" data-track-position="footer" data-track-label="🛒 線上商店 flowers.fenny-studio.com"><span class="ce">🛒</span><span class="cn">線上商店</span><span class="cs">flowers.fenny-studio.com</span></a>
+    <a class="contact-card" href="https://www.instagram.com/fenny.studio/" target="_blank" rel="noopener" data-track-id="b35" data-track-position="footer" data-track-label="📷 Instagram @fenny.studio"><span class="ce">📷</span><span class="cn">Instagram</span><span class="cs">@fenny.studio</span></a>
+    <a class="contact-card" href="https://lin.ee/117MDRD" target="_blank" rel="noopener" data-track-id="b36" data-track-position="footer" data-track-label="💬 LINE 加好友"><span class="ce">💬</span><span class="cn">LINE</span><span class="cs">加好友</span></a>
+    <a class="contact-card" href="https://flowers.fenny-studio.com/" target="_blank" rel="noopener" data-track-id="b37" data-track-position="footer" data-track-label="🛒 線上商店 flowers.fenny-studio.com"><span class="ce">🛒</span><span class="cn">線上商店</span><span class="cs">flowers.fenny-studio.com</span></a>
   </div>
   <div class="foot-mark">芬妮手作 Fenny Studio</div>
 </footer>
