@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>免膠繽紛聖誕花環 DIY 免費教學｜芬妮手作</title>
+<style>
+  :root {
+    --red: #D1483F;
+    --red-deep: #A6342C;
+    --red-soft: #F7DCD9;
+    --red-light: #FCEEEC;
+    --green: #3E7B5A;
+    --gold: #D9A94A;
+    --cream: #FBF6EE;
+    --ink: #2F2A26;
+    --ink-soft: #5B524B;
+    --ink-muted: #8C7E72;
+    --white-warm: #FFFDF9;
+    --line: #E9E1D6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background: var(--cream); color: var(--ink);
+    -webkit-font-smoothing: antialiased; line-height: 1.6;
+  }
+  img, video { display: block; max-width: 100%; }
+
+  /* ========== 置頂：聖誕系列材料包橫滑列 ========== */
+  .kitbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--red); color: #fff;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+  }
+  .kitbar-inner { max-width: 1040px; margin: 0 auto; padding: 8px 12px; }
+  .kitbar-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; opacity: .95; margin: 2px 2px 7px; }
+  .kitbar-scroll {
+    display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;
+    scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch;
+  }
+  .kitbar-scroll::-webkit-scrollbar { height: 0; }
+  .kit-card {
+    flex: 0 0 auto; scroll-snap-align: start; width: 76px;
+    text-decoration: none; color: #fff; text-align: center;
+  }
+  .kit-card img {
+    width: 72px; height: 72px; border-radius: 14px; object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.55); background: #fff;
+  }
+  .kit-card.featured img { border-color: var(--gold); border-width: 3px; }
+  .kit-card span { display: block; font-size: 11px; line-height: 1.25; margin-top: 4px; }
+  .kit-card.all { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .kit-card.all .allbox {
+    width: 72px; height: 72px; border-radius: 14px; border: 2px dashed rgba(255,255,255,.6);
+    display: flex; align-items: center; justify-content: center; font-size: 26px;
+  }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+
+  /* ========== 主視覺 ========== */
+  .hero {
+    background: linear-gradient(150deg, #D1483F 0%, #8E2B24 100%); color: #fff;
+    text-align: center; padding: 34px 16px 40px;
+  }
+  .hero .tag {
+    display: inline-block; background: rgba(255,255,255,0.18); color:#fff;
+    padding: 5px 14px; border-radius: 20px; font-size: 12px; letter-spacing: 2px; font-weight: 600; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: clamp(27px, 7vw, 46px); font-weight: 800; line-height: 1.25; margin-bottom: 10px; }
+  .hero p { font-size: clamp(15px, 4vw, 19px); color: rgba(255,255,255,.95); max-width: 520px; margin: 0 auto 18px; }
+  .hero-img {
+    width: min(62vw, 260px); aspect-ratio: 9/16; object-fit: cover; margin: 6px auto 20px;
+    border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  }
+  .btn-buy {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: var(--red-deep); text-decoration: none;
+    padding: 14px 26px; border-radius: 30px; font-weight: 800; font-size: clamp(15px,4vw,18px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  }
+  .btn-buy:active { transform: translateY(1px); }
+
+  /* ========== 步驟總標 ========== */
+  .steps-head { text-align: center; padding: 34px 16px 6px; }
+  .steps-head .tag { display:inline-block; background: var(--red-soft); color: var(--red-deep); padding: 5px 14px; border-radius: 20px; font-size: 12px; letter-spacing: 2px; font-weight: 700; margin-bottom: 12px; }
+  .steps-head h2 { font-size: clamp(22px, 6vw, 34px); font-weight: 800; }
+  .steps-head p { color: var(--ink-soft); margin-top: 8px; font-size: clamp(14px,3.6vw,17px); }
+
+  /* ========== 單一步驟 ========== */
+  .step { padding: 22px 16px; }
+  .step-inner {
+    max-width: 920px; margin: 0 auto;
+    background: var(--white-warm); border: 1px solid var(--line); border-radius: 22px;
+    overflow: hidden; box-shadow: 0 8px 26px rgba(166,52,44,0.08);
+  }
+  .step-media { width: 100%; max-width: 264px; margin: 18px auto 0; background: #000; aspect-ratio: 9/16; max-height: 56vh; border-radius: 16px; overflow: hidden; }
+  .step-media video { width: 100%; height: 100%; object-fit: cover; background:#000; }
+  .step-body { padding: 20px 20px 24px; }
+  .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .step-badge {
+    width: 46px; height: 46px; border-radius: 50%; background: var(--red); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size: 21px; font-weight: 800; flex: 0 0 auto;
+  }
+  .step-head h3 { font-size: clamp(20px, 5.4vw, 28px); font-weight: 800; }
+  .step-list { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: sub; }
+  .step-list li {
+    counter-increment: sub; display: flex; gap: 12px; align-items: flex-start;
+    background: var(--cream); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 15px; font-size: clamp(15px, 4vw, 18px); line-height: 1.65;
+  }
+  .step-list li::before {
+    content: counter(sub); flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--red); color: #fff; display:flex; align-items:center; justify-content:center;
+    font-size: 13px; font-weight: 700; margin-top: 1px;
+  }
+  .step-list.single li::before { content: "✓"; }
+  .step-tip {
+    margin-top: 14px; padding: 12px 15px; border-radius: 12px;
+    background: var(--red-soft); color: var(--red-deep); font-weight: 600;
+    font-size: clamp(14px,3.6vw,16px); line-height: 1.6;
+  }
+
+  /* 桌機：影片與文字並排 */
+  @media (min-width: 760px) {
+    .step-inner { display: grid; grid-template-columns: minmax(0,320px) 1fr; align-items: stretch; }
+    .step-media { max-width: none; margin: 0; border-radius: 0; aspect-ratio: 9/16; max-height: none; height: 100%; }
+    .step-body { padding: 26px 28px; align-self: center; }
+  }
+
+  /* ========== 中段 CTA ========== */
+  .midcta { padding: 10px 16px 6px; }
+  .midcta-inner {
+    max-width: 920px; margin: 0 auto; text-align: center;
+    background: linear-gradient(135deg, var(--red-soft), var(--red-light));
+    border: 1px solid var(--line); border-radius: 22px; padding: 24px 20px;
+  }
+  .midcta-inner h3 { font-size: clamp(19px,5vw,26px); font-weight: 800; margin-bottom: 8px; }
+  .midcta-inner p { color: var(--ink-soft); font-size: clamp(14px,3.8vw,17px); margin-bottom: 16px; }
+  .btn-buy-red {
+    display: inline-flex; align-items:center; gap: 8px;
+    background: var(--red); color:#fff; text-decoration:none;
+    padding: 13px 26px; border-radius: 30px; font-weight: 800; font-size: clamp(15px,4vw,18px);
+    box-shadow: 0 10px 26px rgba(166,52,44,.26);
+  }
+  .btn-buy-red:active { transform: translateY(1px); }
+
+  /* ========== 完整聖誕系列 ========== */
+  .series { padding: 34px 16px 10px; }
+  .series-inner { max-width: 920px; margin: 0 auto; text-align: center; }
+  .series-inner h2 { font-size: clamp(21px,5.6vw,30px); font-weight: 800; margin-bottom: 6px; }
+  .series-inner p { color: var(--ink-soft); font-size: clamp(14px,3.6vw,17px); margin-bottom: 18px; }
+  .series-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 560px) { .series-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 820px) { .series-grid { grid-template-columns: repeat(4, 1fr); } }
+  .series-card {
+    background: var(--white-warm); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+    text-decoration: none; color: var(--ink); box-shadow: 0 4px 14px rgba(166,52,44,.06);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .series-card:hover, .series-card:active { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(166,52,44,.14); }
+  .series-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .series-card span { display: block; padding: 9px 8px; font-size: clamp(12px,3.4vw,14px); font-weight: 700; text-align: center; }
+  .btn-all {
+    display: inline-flex; align-items:center; gap: 8px; margin-top: 18px;
+    background: var(--green); color:#fff; text-decoration:none;
+    padding: 13px 26px; border-radius: 28px; font-weight: 800; font-size: clamp(15px,4vw,18px);
+    box-shadow: 0 10px 26px rgba(62,123,90,.24);
+  }
+
+  /* ========== 結尾 ========== */
+  footer { background: var(--red-soft); margin-top: 28px; padding: 30px 16px 40px; text-align: center; }
+  footer .msg { font-size: clamp(15px,4vw,19px); max-width: 560px; margin: 0 auto 6px; }
+  footer .msg strong { color: var(--red); }
+  footer .intro { color: var(--ink-soft); font-size: clamp(13px,3.4vw,16px); max-width: 540px; margin: 10px auto 16px; }
+  .contact-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .contact-card {
+    background: var(--white-warm); border: 1px solid var(--line); border-radius: 16px; padding: 14px 20px;
+    display: flex; flex-direction: column; align-items: center; gap: 3px; width: 150px;
+    text-decoration: none; color: inherit;
+  }
+  .contact-card .ce { font-size: 26px; }
+  .contact-card .cn { font-weight: 700; }
+  .contact-card .cs { font-size: 12px; color: var(--ink-muted); }
+  .foot-mark { margin-top: 22px; font-size: 12px; color: var(--ink-muted); letter-spacing: 1px; }
+
+  /* ========== 準備材料 ========== */
+  .step-badge.prep { background: var(--green); font-size: 15px; }
+  .mat-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; }
+  @media (min-width: 480px) { .mat-list { grid-template-columns: 1fr 1fr; } }
+  .mat-list li {
+    background: var(--cream); border: 1px solid var(--line); border-radius: 12px;
+    padding: 10px 14px; font-size: clamp(14px, 3.8vw, 17px); line-height: 1.5;
+  }
+  .mat-list li b { color: var(--red-deep); }
+  .mat-note { margin-top: 12px; color: var(--ink-soft); font-size: clamp(13px,3.4vw,15px); }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
+  .jump button {
+    border: 1px solid var(--line); background: var(--white-warm); color: var(--ink);
+    border-radius: 20px; padding: 6px 13px; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer;
+  }
+</style>
+<script defer src="analytics.js?v=20261123"></script>
+</head>
+<body>
+
+<!-- 置頂：聖誕系列材料包橫滑列 -->
+<header class="kitbar">
+  <div class="kitbar-inner">
+    <div class="kitbar-label">🎄 芬妮聖誕系列材料包 ·往右滑看更多 →</div>
+    <div class="kitbar-scroll">
+      <a class="kit-card featured" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b01" data-track-position="top_series" data-track-label="免膠花環"><img src="kits/glue-free-colorful-christmas-wreath-diy-kit.jpg" alt="免膠繽紛聖誕花環材料包" loading="lazy"><span>免膠花環</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/mini-christmas-snowman-diy-kit/" target="_blank" rel="noopener" data-track-id="b02" data-track-position="top_series" data-track-label="迷你雪人"><img src="kits/mini-christmas-snowman-diy-kit.jpg" alt="迷你聖誕雪人材料包" loading="lazy"><span>迷你雪人</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/mini-christmas-reindeer-diy-kit/" target="_blank" rel="noopener" data-track-id="b03" data-track-position="top_series" data-track-label="小麋鹿"><img src="kits/mini-christmas-reindeer-diy-kit.jpg" alt="迷你聖誕小麋鹿材料包" loading="lazy"><span>小麋鹿</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/christmas-pompom-santa-diy-kit/" target="_blank" rel="noopener" data-track-id="b04" data-track-position="top_series" data-track-label="蓬蓬老公公"><img src="kits/christmas-pompom-santa-diy-kit.jpg" alt="聖誕蓬蓬老公公材料包" loading="lazy"><span>蓬蓬老公公</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/christmas-scarf-bear-diy-kit/" target="_blank" rel="noopener" data-track-id="b05" data-track-position="top_series" data-track-label="圍巾小熊"><img src="kits/christmas-scarf-bear-diy-kit.jpg" alt="聖誕圍巾小熊材料包" loading="lazy"><span>圍巾小熊</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/bear-guardian-christmas-tree-diy-kit/" target="_blank" rel="noopener" data-track-id="b06" data-track-position="top_series" data-track-label="熊熊聖誕樹"><img src="kits/bear-guardian-christmas-tree-diy-kit.jpg" alt="熊熊守護聖誕樹材料包" loading="lazy"><span>熊熊聖誕樹</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/christmas-lucky-bell-diy-kit/" target="_blank" rel="noopener" data-track-id="b07" data-track-position="top_series" data-track-label="聖誕好運鈴"><img src="kits/christmas-lucky-bell-diy-kit.jpg" alt="聖誕好運鈴材料包" loading="lazy"><span>聖誕好運鈴</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/christmas-tree-diy/" target="_blank" rel="noopener" data-track-id="b08" data-track-position="top_series" data-track-label="繽紛聖誕樹"><img src="kits/christmas-tree-diy.jpg" alt="繽紛聖誕樹材料包" loading="lazy"><span>繽紛聖誕樹</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/christmas-wreath-diy/" target="_blank" rel="noopener" data-track-id="b09" data-track-position="top_series" data-track-label="聖誕花環"><img src="kits/christmas-wreath-diy.jpg" alt="聖誕花環材料包" loading="lazy"><span>聖誕花環</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/q-christmas-wreath/" target="_blank" rel="noopener" data-track-id="b10" data-track-position="top_series" data-track-label="Q萌花環"><img src="kits/q-christmas-wreath.jpg" alt="Q萌花環材料包" loading="lazy"><span>Q萌花環</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/snowflake-diy/" target="_blank" rel="noopener" data-track-id="b11" data-track-position="top_series" data-track-label="聖誕雪花"><img src="kits/snowflake-diy.jpg" alt="聖誕雪花掛飾材料包" loading="lazy"><span>聖誕雪花</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/santa-diy/" target="_blank" rel="noopener" data-track-id="b12" data-track-position="top_series" data-track-label="老公公掛飾"><img src="kits/santa-diy.jpg" alt="聖誕老公公掛飾材料包" loading="lazy"><span>老公公掛飾</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/santa-claus-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b13" data-track-position="top_series" data-track-label="老公公花環"><img src="kits/santa-claus-christmas-wreath-diy-kit.jpg" alt="聖誕老公公花環材料包" loading="lazy"><span>老公公花環</span></a>
+      <a class="kit-card" href="https://flowers.fenny-studio.com/product/rainbow-dream-65cm-pipe-cleaner-christmas-tree/" target="_blank" rel="noopener" data-track-id="b14" data-track-position="top_series" data-track-label="彩虹大樹"><img src="kits/rainbow-dream-65cm-pipe-cleaner-christmas-tree.jpg" alt="彩虹夢境大型聖誕樹材料包" loading="lazy"><span>彩虹大樹</span></a>
+      <a class="kit-card all" href="https://flowers.fenny-studio.com/product-category/christmas/" target="_blank" rel="noopener" data-track-id="b15" data-track-position="top_series" data-track-label="🎄 看全部"><span class="allbox">🎄</span><span>看全部</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- 主視覺 -->
+<section class="hero">
+  <span class="tag">FENNY STUDIO 🎄 免費教學</span>
+  <h1>免膠繽紛聖誕花環<br>毛根 DIY 教學</h1>
+  <p>花環主體不用熱熔膠，九個步驟跟著影片做，新手和小朋友都能做 🤍</p>
+  <img class="hero-img" src="steps/hero-done.jpg" alt="完成的免膠繽紛聖誕花環">
+  <br>
+  <a class="btn-buy" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b16" data-track-position="hero" data-track-label="🛒 購買免膠花環材料包">🛒 購買免膠花環材料包</a>
+</section>
+
+<section class="steps-head">
+  <span class="tag">動手做</span>
+  <h2>🎄 免膠繽紛聖誕花環｜製作步驟</h2>
+  <p>往下滑，一步一步跟著做。影片點一下就會播放。</p>
+  <div class="jump" aria-label="跳到步驟">
+    <button type="button" data-jump="prep">材料</button><button type="button" data-jump="1">1 繞白圈</button><button type="button" data-jump="2">2 長線</button><button type="button" data-jump="3">3 彈簧</button><button type="button" data-jump="4">4 穿串</button><button type="button" data-jump="5">5 繞花環</button><button type="button" data-jump="6">6 鈴鐺</button><button type="button" data-jump="7">7 掛環</button><button type="button" data-jump="8">8 裝飾</button><button type="button" data-jump="9">9 蝴蝶結</button>
+  </div>
+</section>
+
+<!-- 準備材料 -->
+<section class="step" id="step-prep">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step0-materials-poster.jpg"><source src="steps/step0-materials.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge prep">備</div><h3>🧺 準備材料</h3></div>
+      <ul class="mat-list">
+        <li><b>綠色毛根</b>　約半捆</li>
+        <li><b>白色塑膠圈</b>　1 個，花環的骨架</li>
+        <li><b>吸管或鉛筆</b>　直徑約 0.6～0.7 公分，捲彈簧用</li>
+        <li><b>鈴鐺</b>　1 個</li>
+        <li><b>皮革繩</b>　1 條，當掛環</li>
+        <li><b>緞帶</b>　1 條，綁蝴蝶結</li>
+        <li><b>小裝飾</b>　毛球、小蝴蝶結、雪花等，照喜好</li>
+        <li><b>手工膠或保麗龍膠</b>　貼裝飾用</li>
+      </ul>
+      <div class="mat-note">花環主體全部用扭的、繞的，不用熱熔膠，親子一起做也不怕燙。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 1 -->
+<section class="step" id="step-1">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step1-ring-poster.jpg"><source src="steps/step1-ring.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">1</div><h3>🟢 毛根繞滿白圈</h3></div>
+      <ol class="step-list">
+        <li>毛根頭勾住白色塑膠圈，尾端扭緊固定。</li>
+        <li>一圈一圈緊密地繞，不要留縫。</li>
+        <li>一根繞完，跟下一根的尾端扭在一起，接著繼續繞。</li>
+        <li>繞到最後一段，跟起頭轉圈打一個結，就固定了。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 2 -->
+<section class="step" id="step-2">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step2-line-poster.jpg"><source src="steps/step2-line.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">2</div><h3>🧵 扭上一根長線</h3></div>
+      <ol class="step-list">
+        <li>在打結的地方勾上一根毛根，扭緊固定。</li>
+        <li>讓它豎起來，這根就是等一下穿彈簧的長線。</li>
+      </ol>
+      <div class="step-tip">💡 小提醒：毛根先留 2 根，當穿彈簧的長線。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 3 -->
+<section class="step" id="step-3">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step3-spring-poster.jpg"><source src="steps/step3-spring.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">3</div><h3>🌀 捲小彈簧</h3></div>
+      <ol class="step-list">
+        <li>一根毛根靠著吸管，或直徑約 0.6～0.7 公分的鉛筆，一圈一圈繞。</li>
+        <li>整根繞完，往中間推緊，再從筆上抽出來。</li>
+        <li>總共做 30～35 個小彈簧。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 中段材料包 CTA（步驟 3 後） -->
+<section class="midcta">
+  <div class="midcta-inner">
+    <h3>懶得準備材料？🎁</h3>
+    <p>毛根、白圈、鈴鐺、皮繩和裝飾都幫你備好了，還附完整教學影片，打開就能做。</p>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b17" data-track-position="after_step_3" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
+  </div>
+</section>
+
+<!-- 步驟 4 -->
+<section class="step" id="step-4">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step4-string-poster.jpg"><source src="steps/step4-string.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">4</div><h3>🔗 彈簧穿成長串</h3></div>
+      <ol class="step-list">
+        <li>把小彈簧套進長線，往下推到底。</li>
+        <li>一個接一個穿，穿成一長串。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 5 -->
+<section class="step" id="step-5">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step5-wrap-poster.jpg"><source src="steps/step5-wrap.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">5</div><h3>🎄 繞成蓬蓬花環</h3></div>
+      <ol class="step-list">
+        <li>彈簧串穿過圓圈中間，一圈一圈繞過去。</li>
+        <li>每繞一圈就往前推緊，花環會慢慢變蓬。</li>
+        <li>長線不夠就再接一根、兩根扭在一起；彈簧用完再穿一些上去，繼續繞。</li>
+        <li>圈圈盡量推緊密，會比較扎實漂亮。最後尾巴在上方扭緊，整理一下形狀。</li>
+      </ol>
+      <div class="step-tip">💡 小提醒：上方的尾巴先留著，等一下要綁掛繩。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 6 -->
+<section class="step" id="step-6">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step6-bell-poster.jpg"><source src="steps/step6-bell.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">6</div><h3>🔔 掛上鈴鐺</h3></div>
+      <ol class="step-list">
+        <li>鈴鐺放進花環中間，跟中間的毛根一起交叉、扭緊固定。</li>
+        <li>上面再綁一個結，綁緊鈴鐺才不會掉，剪掉多的線。</li>
+      </ol>
+      <div class="step-tip">💡 小提醒：擔心鈴鐺不牢固，可以塗一點熱熔膠固定。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 中段材料包 CTA（步驟 6 後） -->
+<section class="midcta">
+  <div class="midcta-inner">
+    <h3>材料不用自己找 🎁</h3>
+    <p>一包就有整個花環要用的材料和完整教學影片，打開就能接著做。</p>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b18" data-track-position="after_step_6" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
+  </div>
+</section>
+
+<!-- 步驟 7 -->
+<section class="step" id="step-7">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step7-loop-poster.jpg"><source src="steps/step7-loop.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">7</div><h3>🤎 綁上皮繩掛環</h3></div>
+      <ol class="step-list">
+        <li>皮革繩兩端打一個結，拉緊。</li>
+        <li>把皮繩穿進上方的毛根，用毛根尾巴繞過去把皮繩綁住。</li>
+        <li>尾端塞進去藏好，再把皮繩拉緊。</li>
+      </ol>
+      <div class="step-tip">💡 小提醒：擔心掛繩不牢固，可以塗一點熱熔膠固定。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 8 -->
+<section class="step" id="step-8">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step8-deco-poster.jpg"><source src="steps/step8-deco.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">8</div><h3>✨ 放上裝飾</h3></div>
+      <ul class="step-list single">
+        <li>裝飾一個一個貼上去，顏色和位置照自己喜歡的搭配。</li>
+      </ul>
+      <div class="step-tip">💡 小秘訣：裝飾背面點手工膠，用保麗龍膠也可以。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 步驟 9 -->
+<section class="step" id="step-9">
+  <div class="step-inner">
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step9-bow-poster.jpg"><source src="steps/step9-bow.mp4" type="video/mp4"></video></div>
+    <div class="step-body">
+      <div class="step-head"><div class="step-badge">9</div><h3>🎀 綁緞帶蝴蝶結</h3></div>
+      <ol class="step-list">
+        <li>緞帶繞過花環上方，打一個蝴蝶結。</li>
+        <li>塗上一點膠，直接貼在花環上。</li>
+        <li>整理蝴蝶結的形狀、把尾巴順一順，完成！</li>
+      </ol>
+      <div class="step-tip">🎁 做好了嗎？掛在牆上、門把上，或裝進禮物袋送人都很可愛。拍張照標記 @fenny.studio，讓芬妮看看你的花環！</div>
+    </div>
+  </div>
+</section>
+
+<!-- 完整聖誕系列 -->
+<section class="series">
+  <div class="series-inner">
+    <h2>🎄 更多芬妮聖誕系列材料包</h2>
+    <p>一樣都附完整教學，新手也能輕鬆做。</p>
+    <div class="series-grid">
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b19" data-track-position="bottom_series" data-track-label="免膠繽紛聖誕花環"><img src="kits/glue-free-colorful-christmas-wreath-diy-kit.jpg" alt="免膠繽紛聖誕花環材料包" loading="lazy"><span>免膠繽紛聖誕花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-snowman-diy-kit/" target="_blank" rel="noopener" data-track-id="b20" data-track-position="bottom_series" data-track-label="迷你聖誕雪人"><img src="kits/mini-christmas-snowman-diy-kit.jpg" alt="迷你聖誕雪人材料包" loading="lazy"><span>迷你聖誕雪人</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/mini-christmas-reindeer-diy-kit/" target="_blank" rel="noopener" data-track-id="b21" data-track-position="bottom_series" data-track-label="迷你聖誕小麋鹿"><img src="kits/mini-christmas-reindeer-diy-kit.jpg" alt="迷你聖誕小麋鹿材料包" loading="lazy"><span>迷你聖誕小麋鹿</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-pompom-santa-diy-kit/" target="_blank" rel="noopener" data-track-id="b22" data-track-position="bottom_series" data-track-label="聖誕蓬蓬老公公"><img src="kits/christmas-pompom-santa-diy-kit.jpg" alt="聖誕蓬蓬老公公材料包" loading="lazy"><span>聖誕蓬蓬老公公</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-scarf-bear-diy-kit/" target="_blank" rel="noopener" data-track-id="b23" data-track-position="bottom_series" data-track-label="聖誕圍巾小熊"><img src="kits/christmas-scarf-bear-diy-kit.jpg" alt="聖誕圍巾小熊材料包" loading="lazy"><span>聖誕圍巾小熊</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/bear-guardian-christmas-tree-diy-kit/" target="_blank" rel="noopener" data-track-id="b24" data-track-position="bottom_series" data-track-label="熊熊守護聖誕樹"><img src="kits/bear-guardian-christmas-tree-diy-kit.jpg" alt="熊熊守護聖誕樹材料包" loading="lazy"><span>熊熊守護聖誕樹</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-lucky-bell-diy-kit/" target="_blank" rel="noopener" data-track-id="b25" data-track-position="bottom_series" data-track-label="聖誕好運鈴"><img src="kits/christmas-lucky-bell-diy-kit.jpg" alt="聖誕好運鈴材料包" loading="lazy"><span>聖誕好運鈴</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-tree-diy/" target="_blank" rel="noopener" data-track-id="b26" data-track-position="bottom_series" data-track-label="繽紛聖誕樹"><img src="kits/christmas-tree-diy.jpg" alt="繽紛聖誕樹材料包" loading="lazy"><span>繽紛聖誕樹</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/christmas-wreath-diy/" target="_blank" rel="noopener" data-track-id="b27" data-track-position="bottom_series" data-track-label="聖誕花環"><img src="kits/christmas-wreath-diy.jpg" alt="聖誕花環材料包" loading="lazy"><span>聖誕花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/q-christmas-wreath/" target="_blank" rel="noopener" data-track-id="b28" data-track-position="bottom_series" data-track-label="Q萌花環"><img src="kits/q-christmas-wreath.jpg" alt="Q萌花環材料包" loading="lazy"><span>Q萌花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/snowflake-diy/" target="_blank" rel="noopener" data-track-id="b29" data-track-position="bottom_series" data-track-label="聖誕雪花掛飾"><img src="kits/snowflake-diy.jpg" alt="聖誕雪花掛飾材料包" loading="lazy"><span>聖誕雪花掛飾</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-diy/" target="_blank" rel="noopener" data-track-id="b30" data-track-position="bottom_series" data-track-label="聖誕老公公掛飾"><img src="kits/santa-diy.jpg" alt="聖誕老公公掛飾材料包" loading="lazy"><span>聖誕老公公掛飾</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/santa-claus-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b31" data-track-position="bottom_series" data-track-label="聖誕老公公花環"><img src="kits/santa-claus-christmas-wreath-diy-kit.jpg" alt="聖誕老公公花環材料包" loading="lazy"><span>聖誕老公公花環</span></a>
+      <a class="series-card" href="https://flowers.fenny-studio.com/product/rainbow-dream-65cm-pipe-cleaner-christmas-tree/" target="_blank" rel="noopener" data-track-id="b32" data-track-position="bottom_series" data-track-label="彩虹夢境大型樹"><img src="kits/rainbow-dream-65cm-pipe-cleaner-christmas-tree.jpg" alt="彩虹夢境大型聖誕樹材料包" loading="lazy"><span>彩虹夢境大型樹</span></a>
+    </div>
+    <a class="btn-all" href="https://flowers.fenny-studio.com/product-category/christmas/" target="_blank" rel="noopener" data-track-id="b33" data-track-position="bottom_all" data-track-label="🎄 逛全部聖誕系列材料包 ›">🎄 逛全部聖誕系列材料包 ›</a>
+  </div>
+</section>
+
+<footer>
+  <div class="msg">每一個都是你親手繞出來的，蓬度都不一樣。<br><strong>聖誕快樂！</strong> 🎁</div>
+  <div class="intro">想看更多手作、預約課程或訂製作品，歡迎追蹤・聯絡芬妮手作 🤍</div>
+  <div class="contact-row">
+    <a class="contact-card" href="https://www.instagram.com/fenny.studio/" target="_blank" rel="noopener" data-track-id="b34" data-track-position="footer" data-track-label="📷 Instagram @fenny.studio"><span class="ce">📷</span><span class="cn">Instagram</span><span class="cs">@fenny.studio</span></a>
+    <a class="contact-card" href="https://lin.ee/117MDRD" target="_blank" rel="noopener" data-track-id="b35" data-track-position="footer" data-track-label="💬 LINE 加好友"><span class="ce">💬</span><span class="cn">LINE</span><span class="cs">加好友</span></a>
+    <a class="contact-card" href="https://flowers.fenny-studio.com/" target="_blank" rel="noopener" data-track-id="b36" data-track-position="footer" data-track-label="🛒 線上商店 flowers.fenny-studio.com"><span class="ce">🛒</span><span class="cn">線上商店</span><span class="cs">flowers.fenny-studio.com</span></a>
+  </div>
+  <div class="foot-mark">芬妮手作 Fenny Studio</div>
+</footer>
+
+<script>
+  // 一次只播一支：有人按播放，就把其他影片停下來
+  const vids = Array.from(document.querySelectorAll('video'));
+  vids.forEach(v => v.addEventListener('play', () => {
+    vids.forEach(o => { if (o !== v) o.pause(); });
+  }));
+  // 步驟快速跳轉（避開置頂商品列的高度）
+  document.querySelectorAll('[data-jump]').forEach(b => b.addEventListener('click', () => {
+    const t = document.getElementById('step-' + b.dataset.jump);
+    const bar = document.querySelector('.kitbar');
+    if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - (bar ? bar.offsetHeight : 0) - 8, behavior: 'smooth' });
+  }));
+</script>
+
+</body>
+</html>
