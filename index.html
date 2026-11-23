@@ -72,7 +72,7 @@
   .hero h1 { font-size: clamp(27px, 7vw, 46px); font-weight: 800; line-height: 1.25; margin-bottom: 10px; }
   .hero p { font-size: clamp(15px, 4vw, 19px); color: rgba(255,255,255,.95); max-width: 520px; margin: 0 auto 18px; }
   .hero-img {
-    width: min(62vw, 260px); aspect-ratio: 9/16; object-fit: cover; margin: 6px auto 20px;
+    width: min(78vw, 340px); aspect-ratio: 1/1; object-fit: cover; margin: 6px auto 20px;
     border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.3);
   }
   .btn-buy {
@@ -234,8 +234,8 @@
 <section class="hero">
   <span class="tag">FENNY STUDIO 🎄 免費教學</span>
   <h1>免膠繽紛聖誕花環<br>毛根 DIY 教學</h1>
-  <p>花環主體不用熱熔膠，九個步驟跟著影片做，新手和小朋友都能做 🤍</p>
-  <img class="hero-img" src="steps/hero-done.jpg" alt="完成的免膠繽紛聖誕花環">
+  <p>花環主體不用熱熔膠，五個步驟跟著影片做，新手和小朋友都能做 🤍</p>
+  <img class="hero-img" src="steps/hero-cover.jpg" alt="免膠繽紛聖誕花環 DIY 材料包">
   <br>
   <a class="btn-buy" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b16" data-track-position="hero" data-track-label="🛒 購買免膠花環材料包">🛒 購買免膠花環材料包</a>
 </section>
@@ -245,7 +245,7 @@
   <h2>🎄 免膠繽紛聖誕花環｜製作步驟</h2>
   <p>往下滑，一步一步跟著做。影片點一下就會播放。</p>
   <div class="jump" aria-label="跳到步驟">
-    <button type="button" data-jump="prep">材料</button><button type="button" data-jump="1">1 繞白圈</button><button type="button" data-jump="2">2 長線</button><button type="button" data-jump="3">3 彈簧</button><button type="button" data-jump="4">4 穿串</button><button type="button" data-jump="5">5 繞花環</button><button type="button" data-jump="6">6 鈴鐺</button><button type="button" data-jump="7">7 掛環</button><button type="button" data-jump="8">8 裝飾</button><button type="button" data-jump="9">9 蝴蝶結</button>
+    <button type="button" data-jump="prep">材料</button><button type="button" data-jump="1">1 繞白圈</button><button type="button" data-jump="2">2 彈簧</button><button type="button" data-jump="3">3 穿串</button><button type="button" data-jump="4">4 繞花環</button><button type="button" data-jump="5">5 裝飾＋蝴蝶結</button>
   </div>
 </section>
 
@@ -289,49 +289,36 @@
 <!-- 步驟 2 -->
 <section class="step" id="step-2">
   <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step2-line-poster.jpg"><source src="steps/step2-line.mp4" type="video/mp4"></video></div>
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step3-spring-poster.jpg"><source src="steps/step3-spring.mp4" type="video/mp4"></video></div>
     <div class="step-body">
-      <div class="step-head"><div class="step-badge">2</div><h3>🧵 扭上一根長線</h3></div>
+      <div class="step-head"><div class="step-badge">2</div><h3>🌀 捲小彈簧</h3></div>
       <ol class="step-list">
-        <li>在打結的地方勾上一根毛根，扭緊固定。</li>
-        <li>讓它豎起來，這根就是等一下穿彈簧的長線。</li>
+        <li>一根毛根靠著自備的鉛筆（直徑約 0.6～0.7 公分），一圈一圈繞。</li>
+        <li>整根繞完，往中間推緊，再從筆上抽出來。</li>
+        <li>總共做 30～35 個小彈簧。</li>
       </ol>
-      <div class="step-tip">💡 小提醒：毛根先留 2 根，當穿彈簧的長線。</div>
+      <div class="step-tip">💡 小提醒：毛根先留 2 根，等一下當穿彈簧的長線。</div>
     </div>
+  </div>
+</section>
+
+<!-- 中段材料包 CTA（步驟 2 後） -->
+<section class="midcta">
+  <div class="midcta-inner">
+    <h3>懶得準備材料？🎁</h3>
+    <p>毛根、白圈、鈴鐺、皮繩和裝飾都幫你備好了，還附完整教學影片，打開就能做。</p>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b17" data-track-position="after_step_2" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
   </div>
 </section>
 
 <!-- 步驟 3 -->
 <section class="step" id="step-3">
   <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step3-spring-poster.jpg"><source src="steps/step3-spring.mp4" type="video/mp4"></video></div>
-    <div class="step-body">
-      <div class="step-head"><div class="step-badge">3</div><h3>🌀 捲小彈簧</h3></div>
-      <ol class="step-list">
-        <li>一根毛根靠著自備的鉛筆（直徑約 0.6～0.7 公分），一圈一圈繞。</li>
-        <li>整根繞完，往中間推緊，再從筆上抽出來。</li>
-        <li>總共做 30～35 個小彈簧。</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- 中段材料包 CTA（步驟 3 後） -->
-<section class="midcta">
-  <div class="midcta-inner">
-    <h3>懶得準備材料？🎁</h3>
-    <p>毛根、白圈、鈴鐺、皮繩和裝飾都幫你備好了，還附完整教學影片，打開就能做。</p>
-    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b17" data-track-position="after_step_3" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
-  </div>
-</section>
-
-<!-- 步驟 4 -->
-<section class="step" id="step-4">
-  <div class="step-inner">
     <div class="step-media"><video controls playsinline preload="none" poster="steps/step4-string-poster.jpg"><source src="steps/step4-string.mp4" type="video/mp4"></video></div>
     <div class="step-body">
-      <div class="step-head"><div class="step-badge">4</div><h3>🔗 彈簧穿成長串</h3></div>
+      <div class="step-head"><div class="step-badge">3</div><h3>🔗 彈簧穿成長串</h3></div>
       <ol class="step-list">
+        <li>在白圈打結的地方扭上一根留下來的毛根，當作長線。</li>
         <li>把小彈簧套進長線，往下推到底。</li>
         <li>一個接一個穿，穿成一長串。</li>
       </ol>
@@ -339,84 +326,39 @@
   </div>
 </section>
 
-<!-- 步驟 5 -->
-<section class="step" id="step-5">
+<!-- 步驟 4 -->
+<section class="step" id="step-4">
   <div class="step-inner">
     <div class="step-media"><video controls playsinline preload="none" poster="steps/step5-wrap-poster.jpg"><source src="steps/step5-wrap.mp4" type="video/mp4"></video></div>
     <div class="step-body">
-      <div class="step-head"><div class="step-badge">5</div><h3>🎄 繞成蓬蓬花環</h3></div>
+      <div class="step-head"><div class="step-badge">4</div><h3>🎄 繞成蓬蓬花環</h3></div>
       <ol class="step-list">
         <li>彈簧串穿過圓圈中間，一圈一圈繞過去。</li>
         <li>每繞一圈就往前推緊，花環會慢慢變蓬。</li>
         <li>長線不夠就再接一根、兩根扭在一起；彈簧用完再穿一些上去，繼續繞。</li>
         <li>圈圈盡量推緊密，會比較扎實漂亮。最後尾巴在上方扭緊，整理一下形狀。</li>
       </ol>
-      <div class="step-tip">💡 小提醒：上方的尾巴先留著，等一下要綁掛繩。</div>
     </div>
   </div>
 </section>
 
-<!-- 步驟 6 -->
-<section class="step" id="step-6">
-  <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step6-bell-poster.jpg"><source src="steps/step6-bell.mp4" type="video/mp4"></video></div>
-    <div class="step-body">
-      <div class="step-head"><div class="step-badge">6</div><h3>🔔 掛上鈴鐺</h3></div>
-      <ol class="step-list">
-        <li>鈴鐺放進花環中間，跟中間的毛根一起交叉、扭緊固定。</li>
-        <li>上面再綁一個結，綁緊鈴鐺才不會掉，剪掉多的線。</li>
-      </ol>
-      <div class="step-tip">💡 小提醒：擔心鈴鐺不牢固，可以塗一點熱熔膠固定。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 中段材料包 CTA（步驟 6 後） -->
+<!-- 中段材料包 CTA（步驟 4 後） -->
 <section class="midcta">
   <div class="midcta-inner">
     <h3>材料不用自己找 🎁</h3>
     <p>一包就有整個花環要用的材料和完整教學影片，打開就能接著做。</p>
-    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b18" data-track-position="after_step_6" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
+    <a class="btn-buy-red" href="https://flowers.fenny-studio.com/product/glue-free-colorful-christmas-wreath-diy-kit/" target="_blank" rel="noopener" data-track-id="b18" data-track-position="after_step_4" data-track-label="🛒 購買免膠繽紛聖誕花環材料包">🛒 購買免膠繽紛聖誕花環材料包</a>
   </div>
 </section>
 
-<!-- 步驟 7 -->
-<section class="step" id="step-7">
+<!-- 步驟 5 -->
+<section class="step" id="step-5">
   <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step7-loop-poster.jpg"><source src="steps/step7-loop.mp4" type="video/mp4"></video></div>
+    <div class="step-media"><video controls playsinline preload="none" poster="steps/step8-finish-poster.jpg"><source src="steps/step8-finish.mp4" type="video/mp4"></video></div>
     <div class="step-body">
-      <div class="step-head"><div class="step-badge">7</div><h3>🤎 綁上皮繩掛環</h3></div>
+      <div class="step-head"><div class="step-badge">5</div><h3>✨ 放上裝飾、綁蝴蝶結</h3></div>
       <ol class="step-list">
-        <li>皮革繩兩端打一個結，拉緊。</li>
-        <li>把皮繩穿進上方的毛根，用毛根尾巴繞過去把皮繩綁住。</li>
-        <li>尾端塞進去藏好，再把皮繩拉緊。</li>
-      </ol>
-      <div class="step-tip">💡 小提醒：擔心掛繩不牢固，可以塗一點熱熔膠固定。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 步驟 8 -->
-<section class="step" id="step-8">
-  <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step8-deco-poster.jpg"><source src="steps/step8-deco.mp4" type="video/mp4"></video></div>
-    <div class="step-body">
-      <div class="step-head"><div class="step-badge">8</div><h3>✨ 放上裝飾</h3></div>
-      <ul class="step-list single">
-        <li>裝飾一個一個貼上去，顏色和位置照自己喜歡的搭配。</li>
-      </ul>
-      <div class="step-tip">💡 小秘訣：裝飾背面點手工膠，用保麗龍膠也可以。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 步驟 9 -->
-<section class="step" id="step-9">
-  <div class="step-inner">
-    <div class="step-media"><video controls playsinline preload="none" poster="steps/step9-bow-poster.jpg"><source src="steps/step9-bow.mp4" type="video/mp4"></video></div>
-    <div class="step-body">
-      <div class="step-head"><div class="step-badge">9</div><h3>🎀 綁緞帶蝴蝶結</h3></div>
-      <ol class="step-list">
+        <li>裝飾背面點手工膠（用保麗龍膠也可以），一個一個貼上去，顏色和位置照自己喜歡的搭配。</li>
         <li>緞帶繞過花環上方，打一個蝴蝶結。</li>
         <li>塗上一點膠，直接貼在花環上。</li>
         <li>整理蝴蝶結的形狀、把尾巴順一順，完成！</li>
