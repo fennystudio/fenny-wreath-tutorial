@@ -2,7 +2,7 @@
 
 2026-11-23 起沿用芬妮 GA4（與雪人頁同一套）：`wreath_view`、`wreath_click_bNN`、`wreath_seen_bNN`。
 37 個按鈕的固定識別、位置及目的地以 `tracking.json` 為準；新增或移動按鈕要同步更新，勿重新編號既有按鈕。
-各平台入口連結（UTM）也在 `tracking.json` 的 `entry_links`。
+連結只從自動私訊出去（ManyChat 的 IG／FB、Threads 活動私訊），`utm_source=ig|fb|threads&utm_medium=dm` 由 my-skills `fenny_shared/tutorial_links.py` 在送出平台確定時自動加；`entry_links` 只列 GA4 會看到的三種來源，不需手動貼。
 
 上線前執行 `node --test tests/tracking.test.js`。本機部署 hook 以 `git config core.hooksPath .githooks` 啟用。
 QA 用 `?fenny_qa=1&qa_run=<8位以內英數>`，事件進獨立 `wreath_qa_` 前綴，不送正式 page_view。

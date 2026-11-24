@@ -229,11 +229,8 @@
     }
   ],
   "entry_links": {
-    "ig_dm": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=ig&utm_medium=dm&utm_campaign=wreath_tutorial",
-    "ig_story": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=ig&utm_medium=story&utm_campaign=wreath_tutorial",
-    "ig_post": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=ig&utm_medium=post&utm_campaign=wreath_tutorial",
-    "threads": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=threads&utm_medium=social&utm_campaign=wreath_tutorial",
-    "fb": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=fb&utm_medium=social&utm_campaign=wreath_tutorial",
-    "line": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=line&utm_medium=social&utm_campaign=wreath_tutorial"
+    "ig_dm": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=ig&utm_medium=dm",
+    "fb_dm": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=fb&utm_medium=dm",
+    "threads_dm": "https://fennystudio.github.io/fenny-wreath-tutorial/?utm_source=threads&utm_medium=dm"
   }
 }
